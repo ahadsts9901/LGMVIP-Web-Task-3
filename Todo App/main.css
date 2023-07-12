@@ -285,13 +285,7 @@
         .task-delete-button {
             color: #fff;
             width: 1em;
-        }
-        
-        .is-dragging {
-            background-color: #fff;
-            color: #212121;
-            transform: rotate(-10deg);
-        }
+        }      
         
         .mine {
             margin: 0em;
@@ -315,10 +309,7 @@
         .mine::-webkit-scrollbar-track {
             border-radius: 10px;
             background-color: #212121;
-        }
-        
-        .mine::-webkit-scrollbar {
-            height: 0.5em;
+                   height: 0.5em;
             border-radius: 10px;
             background-color: #212121;
         }
