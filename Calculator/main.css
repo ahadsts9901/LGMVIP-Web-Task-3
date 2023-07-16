@@ -1,0 +1,93 @@
+* {
+    font-family: 'Ruda', 'sans-serif';
+}
+
+body {
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+calculator {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2em;
+    border: 0px;
+    padding: 3em 1em;
+    border-radius: 25px;
+    row-gap: 3em;
+    background-color: #dadada;
+}
+
+
+/* textbox{
+    border-bottom: 2px solid #000;
+} */
+
+.input {
+    color: #000;
+    background-color: #fff;
+    border: 0px;
+    border-radius: 10px;
+    padding: 0.5em;
+    width: 16em;
+    height: 3em;
+    font-size: 1.2em;
+}
+
+buttons {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 1em;
+}
+
+button {
+    width: 4em;
+    height: 4em;
+}
+
+row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 1em;
+}
+
+p {
+    font-weight: bold;
+}
+
+@media only screen and (max-width: 360px) {
+    calculator {
+        width: 90%;
+    }
+    calculator>buttons {
+        width: 100%;
+    }
+    calculator>textbox {
+        width: 100%!important;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    calculator>textbox>input {
+        width: 100%!important;
+    }
+    button {
+        width: 3em;
+        height: 3em;
+    }
+}
+
+@media only screen and (max-width: 325px) {
+    button {
+        width: 2.5em;
+        height: 2.5em;
+    }
+}
