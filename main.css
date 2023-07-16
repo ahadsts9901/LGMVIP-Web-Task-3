@@ -1,0 +1,130 @@
+* {
+    font-family: "Space Mono", monospace;
+    /* font-weight: normal; */
+    font-weight: bold;
+}
+
+html {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 2em 1em;
+}
+
+body {
+    background-color: #212121 !important;
+    color: #fff!important;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 1em;
+    padding: 2em 1em!important;
+    margin: 0em;
+    max-width: 320px;
+    border: 1px solid #fff;
+    padding-bottom: 0.1em!important;
+}
+
+a,
+a>h6 {
+    color: #fff!important;
+}
+
+.input {
+    margin: 0.5em;
+    padding: 0.7em;
+    background-color: #313131!important;
+    border: none;
+    border-radius: 15px;
+    width: 240px;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0em;
+}
+
+row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5em;
+    column-gap: 1em;
+    width: 100%;
+}
+
+column {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 0.5em;
+    row-gap: 1em;
+}
+
+.drop-down {
+    background-color: #212121;
+    color: #fff;
+    border: 0px;
+    padding: 0em;
+    margin: 0em;
+}
+
+.drop-down-options {
+    background-color: #313131;
+    color: #fff;
+    border: 0px;
+}
+
+ul.dropdown-menu.show {
+    background-color: #313131;
+}
+
+.list {
+    width: 8em;
+    margin: 0.3em 0em;
+    display: inline-block;
+    margin-left: 1em;
+    color: #fff!important;
+}
+
+.list a {
+    text-decoration: none;
+    color: #fff!important;
+}
+
+.icon {
+    margin-right: 0.5em;
+}
+
+.center {
+    width: 100%;
+    text-align: center;
+    font-size: 0.6em;
+}
+
+table {
+    background-color: #313131;
+    padding: 1em;
+    border: 1px solid #fff!important;
+}
+
+td {
+    border: 1px solid #fff!important;
+    font-size: 0.65em!important;
+    padding: 0.65em;
+    text-align: left;
+}
+
+@media only screen and (max-width:340px) {
+    body {
+        width: 250px;
+    }
+}
