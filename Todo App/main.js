@@ -15,6 +15,10 @@ form.addEventListener("submit", (event) => {
     // newList.setAttribute('draggable', 'true')
     listContainer.appendChild(newList);
 
+    let handle = document.createElement("h1")
+    handle.className = "bi bi-grip-horizontal col-handle"
+    newList.appendChild(handle)
+
     let listHeading = document.createElement("h2");
     listHeading.className = "center";
     listHeading.innerText = userTodo;
@@ -83,15 +87,17 @@ form.addEventListener("submit", (event) => {
 
     userInput.value = "";
 
-    // Sortable.create(listContainer, {
-    //     group: "newLists",
-    //     animation: 100,
-    // });
-
     // Initialize Sortable.js on the list container
     Sortable.create(appendedList, {
         group: "tasks",
         animation: 300,
+        handle: ".drag-handle",
+    });
+
+    Sortable.create(listContainer, {
+        group: "newLists",
+        animation: 100,
+        handle: ".col-handle",
     });
 
 });
@@ -113,7 +119,6 @@ function makeTaskInput(event) {
         let newWork = document.createElement("p");
         newWork.setAttribute("class", "task-flex");
         newWork.className += " task";
-        newWork.setAttribute("draggable", "true");
         list.appendChild(newWork);
 
         let taskRow = document.createElement("span");
@@ -136,6 +141,10 @@ function makeTaskInput(event) {
         let row = document.createElement("div");
         row.className += " row-task";
         taskRow.appendChild(row);
+
+        let drag = document.createElement("i")
+        drag.className = "bi bi-grip-vertical drag-handle task-delete-button"
+        row.appendChild(drag)
 
         let commentTask = document.createElement("i");
         commentTask.className += " bi bi-chat-left-text task-delete-button";
@@ -177,20 +186,11 @@ function makeTask(event) {
     let newWork = document.createElement("p");
     newWork.setAttribute("class", "task-flex");
     newWork.className += " task";
-    newWork.setAttribute("draggable", "true");
     list.appendChild(newWork);
 
     let taskRow = document.createElement("span");
     taskRow.className += " task-upper-row";
     newWork.appendChild(taskRow);
-
-    newWork.addEventListener("dragstart", () => {
-        newWork.className += " is-dragging";
-    });
-
-    newWork.addEventListener("dragend", () => {
-        newWork.className = "task";
-    });
 
     let span = document.createElement("p");
     span.setAttribute("class", "mine");
@@ -200,6 +200,10 @@ function makeTask(event) {
     let row = document.createElement("div");
     row.className += " row-task";
     taskRow.appendChild(row);
+
+    let drag = document.createElement("i")
+    drag.className = "bi bi-grip-vertical drag-handle task-delete-button"
+    row.appendChild(drag)
 
     let commentTask = document.createElement("i");
     commentTask.className += " bi bi-chat-left-text task-delete-button";

@@ -17,6 +17,11 @@
             row-gap: 2em;
         }
         
+        h1,
+        h2 {
+            margin: 0em;
+        }
+        
         .container {
             display: flex;
             flex-direction: column;
@@ -52,7 +57,6 @@
             padding: 0em;
             column-gap: 0.4em;
             padding-bottom: 0em;
-            margin-left: 0.5em;
             align-self: flex-start;
             /* border-bottom: 2px dashed #212121; */
             /* width: 100%; */
@@ -148,7 +152,7 @@
             justify-content: left;
             align-items: start;
             column-gap: 1em;
-            padding: 1em 2em;
+            padding: 2em;
             width: 100%;
             height: 100%;
             overflow-y: hidden;
@@ -285,12 +289,14 @@
         .task-delete-button {
             color: #fff;
             width: 1em;
-        }      
+        }
         
         .mine {
             margin: 0em;
             overflow-x: auto;
             overflow-y: hidden;
+            width: 100%;
+            text-align: left;
         }
         
         .mine::-moz-scrollbar {
@@ -306,10 +312,15 @@
             background-color: #212121;
         }
         
+        .mine::-webkit-scrollbar {
+            height: 0.5em;
+            background-color: #212121;
+        }
+        
         .mine::-webkit-scrollbar-track {
             border-radius: 10px;
             background-color: #212121;
-                   height: 0.5em;
+            height: 0.5em;
             border-radius: 10px;
             background-color: #212121;
         }
@@ -423,8 +434,11 @@
         .task-upper-row {
             width: 100%;
             display: flex;
+            flex-direction: column-reverse;
             justify-content: space-between;
             align-items: center;
+            row-gap: 0.5em;
+            flex-wrap: wrap;
         }
         
         .comment-row {
@@ -441,7 +455,7 @@
             /* background-color: #fff; */
             min-height: 20em;
             max-height: 20em;
-            padding: 2em 0.3em;
+            padding: 0.5em 0.3em;
         }
         
         .scrollable::-moz-scrollbar {
@@ -487,6 +501,10 @@
         
         .task>.task-comment {
             flex-direction: column;
+        }
+        
+        .drag-handle {
+            align-self: flex-start!important;
         }
         
         @media only screen and (max-width: 750px) {
