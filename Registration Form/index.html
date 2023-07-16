@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8"></meta>
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"></meta>
+
+    <title>Registration Form</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1"></meta>
+
+    <!-- icons cdn -->
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css"></link>
+
+    <!-- font cdn -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;600;700;800;900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="main.css"></link>
+</head>
+
+<body>
+
+    <h1 class="header">Registration<i> Form</i></h1>
+
+    <!-- form-->
+    <form class="form" id="myForm" onsubmit="makeCard(event)">
+
+        <fieldset>
+            <legend>Enter <i class="pink">Details</i></legend>
+
+            <label for="name" class="sub">N<i>a</i>me:</label>
+            <input required type="text" id="name" class="input" placeholder="Enter Student Name...">
+
+            <label for="fatherName" class="sub">F<i>a</i>ther Name:</label>
+            <input required type="text" id="fatherName" class="input" placeholder="Enter Father Name...">
+
+            <label for="age" class="sub">A<i>g</i>e:</label>
+            <input required type="number" id="age" class="input" placeholder="Enter Student Age...">
+
+            <label for="rollNo" class="sub">R<i>o</i>ll Number:</label>
+            <input required type="number" id="rollNo" class="input" placeholder="Enter Roll No...">
+
+            <button type="submit" class="button" id="button">Add +</button>
+
+        </fieldset>
+
+    </form>
+
+    <row class="mainContainer">
+
+        <!-- <column class="card">
+            <h3>Muhammad <i>Ahad</i></h3>
+            <ul>
+                <li class="row-left"><i>Name :</i> Muhammad Ahad</li>
+                <li class="row-left"><i>Father :</i> Azeem Habib</li>
+                <li class="row-left"><i>Age :</i> 18</li>
+                <li class="row-left"><i>SMIT Roll No :</i> 98804</li>
+            </ul>
+        </column> -->
+
+    </row>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <script src="./main.js">
+    </script>
+</body>
